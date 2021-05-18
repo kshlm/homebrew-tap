@@ -33,7 +33,7 @@ class TeleportAT4 < Formula
     (buildpath/"src/github.com/gravitational/teleport").install buildpath.children
     cd "src/github.com/gravitational/teleport" do
       ENV.deparallelize { system "make", "full" }
-      bin.install "build/tsh" => "tsh4"
+      bin.install "build/tsh" => "tsh4", "build/teleport" => "teleport4", "build/tctl" => "tctl4"
     end
   end
 
