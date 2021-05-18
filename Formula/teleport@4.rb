@@ -20,8 +20,6 @@ class TeleportAT4 < Formula
     depends_on "netcat" => :test
   end
 
-  conflicts_with "etsh", because: "both install `tsh` binaries"
-
   resource "webassets" do
     url "https://github.com/gravitational/webassets/archive/72412062d6d55ec7faa9707abf500d703e7d09da.tar.gz"
     sha256 "c84767bea0a723f406e3b6566a0a48892758b2e5f3a9e9b453d22171315fd29d"

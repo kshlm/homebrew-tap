@@ -8,13 +8,13 @@ class NeovimDropIn < Formula
   depends_on "neovim"
 
   conflicts_with "ex-vi",
-    :because => "neovim-drop-in and ex-vi both install bin/ex and bin/view"
+    because: "neovim-drop-in and ex-vi both install bin/ex and bin/view"
 
   conflicts_with "macvim",
-    :because => "neovim-drop-in and macvim both install vi* binaries"
+    because: "neovim-drop-in and macvim both install vi* binaries"
 
   conflicts_with "vim",
-    :because => "neovim-drop-in and vim both install vi* binaries"
+    because: "neovim-drop-in and vim both install vi* binaries"
 
   def install
     bin.mkpath
