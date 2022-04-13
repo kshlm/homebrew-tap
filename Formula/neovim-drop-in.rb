@@ -2,7 +2,7 @@ class NeovimDropIn < Formula
   desc "Emulate vim and vi executables with neovim"
   homepage "https://aur.archlinux.org/packages/neovim-drop-in/"
   url "https://aur.archlinux.org/cgit/aur.git/snapshot/neovim-drop-in.tar.gz"
-  version "1.0"
+  version "1.1"
   sha256 "13fe3a08257a3aa1cd310aad524e510fae2d9f1dce3812476e2881318c40f4fb"
 
   depends_on "neovim"
@@ -24,7 +24,7 @@ class NeovimDropIn < Formula
     bin.install "rvim.sh" => "rvim"
     bin.install "view.sh" => "view"
     bin.install "vimdiff.sh" => "vimdiff"
-    bin.install_symlink "/usr/local/bin/nvim" => "vim"
-    bin.install_symlink "/usr/local/bin/nvim" => "vi"
+    bin.install_symlink bin/"nvim" => "vim"
+    bin.install_symlink bin/"nvim" => "vi"
   end
 end
