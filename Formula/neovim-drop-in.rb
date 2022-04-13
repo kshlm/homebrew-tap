@@ -24,7 +24,7 @@ class NeovimDropIn < Formula
     bin.install "rvim.sh" => "rvim"
     bin.install "view.sh" => "view"
     bin.install "vimdiff.sh" => "vimdiff"
-    bin.install_symlink bin/"nvim" => "vim"
-    bin.install_symlink bin/"nvim" => "vi"
+    bin.install_symlink HOMEBREW_PREFIX/"bin/nvim" => "vim"
+    bin.install_symlink HOMEBREW_PREFIX/"bin/nvim" => "vi"
   end
 end
