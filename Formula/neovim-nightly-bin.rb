@@ -1,8 +1,14 @@
 class NeovimNightlyBin < Formula
   desc "Neovim - Nightly builds from upstream"
   homepage "https://neovim.io"
-  url "https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz"
   version "nightly"
+
+  on_arm do
+    url "https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz"
+  end
+  on_intel do
+    url "https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-x86_64.tar.gz"
+  end
 
   conflicts_with "neovim",
     because: "neovim-nightly and neovim both install bin/nvim"
